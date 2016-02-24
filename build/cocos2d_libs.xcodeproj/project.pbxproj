@@ -1952,6 +1952,18 @@
 		B60C5BD519AC68B10056FBDE /* CCBillBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60C5BD219AC68B10056FBDE /* CCBillBoard.cpp */; };
 		B60C5BD619AC68B10056FBDE /* CCBillBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = B60C5BD319AC68B10056FBDE /* CCBillBoard.h */; };
 		B60C5BD719AC68B10056FBDE /* CCBillBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = B60C5BD319AC68B10056FBDE /* CCBillBoard.h */; };
+		C7FD5C6B1C7DB21300B48E31 /* pomelo.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FD4FF21C7DB21200B48E31 /* pomelo.h */; };
+		C7FD5C6C1C7DB21300B48E31 /* pomelo.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FD4FF21C7DB21200B48E31 /* pomelo.h */; };
+		C7FD5C6D1C7DB21300B48E31 /* pomelo_trans.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FD4FF31C7DB21200B48E31 /* pomelo_trans.h */; };
+		C7FD5C6E1C7DB21300B48E31 /* pomelo_trans.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FD4FF31C7DB21200B48E31 /* pomelo_trans.h */; };
+		C7FD5C6F1C7DB21300B48E31 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF61C7DB21200B48E31 /* libpomelo2.a */; };
+		C7FD5C701C7DB21300B48E31 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF61C7DB21200B48E31 /* libpomelo2.a */; };
+		C7FD5C711C7DB21300B48E31 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF71C7DB21200B48E31 /* libuv.a */; };
+		C7FD5C721C7DB21300B48E31 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF71C7DB21200B48E31 /* libuv.a */; };
+		C7FD5C731C7DB21300B48E31 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF91C7DB21200B48E31 /* libpomelo2.a */; };
+		C7FD5C741C7DB21300B48E31 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FF91C7DB21200B48E31 /* libpomelo2.a */; };
+		C7FD5C751C7DB21300B48E31 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FFA1C7DB21200B48E31 /* libuv.a */; };
+		C7FD5C761C7DB21300B48E31 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FD4FFA1C7DB21200B48E31 /* libuv.a */; };
 		DA8C62A219E52C6400000516 /* ioapi_mem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8C62A019E52C6400000516 /* ioapi_mem.cpp */; };
 		DA8C62A319E52C6400000516 /* ioapi_mem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8C62A019E52C6400000516 /* ioapi_mem.cpp */; };
 		DA8C62A419E52C6400000516 /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = DA8C62A119E52C6400000516 /* ioapi_mem.h */; };
@@ -3017,6 +3029,12 @@
 		B67C624319D4186F00F11FC6 /* ccShader_3D_ColorNormal.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_3D_ColorNormal.frag; sourceTree = "<group>"; };
 		B67C624419D4186F00F11FC6 /* ccShader_3D_ColorNormalTex.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_3D_ColorNormalTex.frag; sourceTree = "<group>"; };
 		B67C624519D4186F00F11FC6 /* ccShader_3D_PositionNormalTex.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = ccShader_3D_PositionNormalTex.vert; sourceTree = "<group>"; };
+		C7FD4FF21C7DB21200B48E31 /* pomelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pomelo.h; sourceTree = "<group>"; };
+		C7FD4FF31C7DB21200B48E31 /* pomelo_trans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pomelo_trans.h; sourceTree = "<group>"; };
+		C7FD4FF61C7DB21200B48E31 /* libpomelo2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo2.a; sourceTree = "<group>"; };
+		C7FD4FF71C7DB21200B48E31 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
+		C7FD4FF91C7DB21200B48E31 /* libpomelo2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpomelo2.a; sourceTree = "<group>"; };
+		C7FD4FFA1C7DB21200B48E31 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libuv.a; sourceTree = "<group>"; };
 		DA8C62A019E52C6400000516 /* ioapi_mem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ioapi_mem.cpp; sourceTree = "<group>"; };
 		DA8C62A119E52C6400000516 /* ioapi_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi_mem.h; sourceTree = "<group>"; };
 		DABC9FA719E7DFA900FA252C /* CCClippingRectangleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingRectangleNode.cpp; sourceTree = "<group>"; };
@@ -3044,7 +3062,11 @@
 				1A570347180BD0850088DEC7 /* libglfw3.a in Frameworks */,
 				1A570361180BD1080088DEC7 /* libpng.a in Frameworks */,
 				1A57037B180BD1C90088DEC7 /* libjpeg.a in Frameworks */,
+				C7FD5C711C7DB21300B48E31 /* libuv.a in Frameworks */,
+				C7FD5C6F1C7DB21300B48E31 /* libpomelo2.a in Frameworks */,
+				C7FD5C731C7DB21300B48E31 /* libpomelo2.a in Frameworks */,
 				1A5703A1180BD22C0088DEC7 /* libtiff.a in Frameworks */,
+				C7FD5C751C7DB21300B48E31 /* libuv.a in Frameworks */,
 				1A5703B8180BD2780088DEC7 /* libwebp.a in Frameworks */,
 				1A57052B180BD31F0088DEC7 /* libfreetype.a in Frameworks */,
 			);
@@ -3055,14 +3077,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFCD6151C070F4800A8D0DB /* libcrypto.a in Frameworks */,
+				C7FD5C701C7DB21300B48E31 /* libpomelo2.a in Frameworks */,
 				0AFCD6161C070F4800A8D0DB /* libssl.a in Frameworks */,
 				15AE1B4A19AAD49000C27E9E /* libcurl.a in Frameworks */,
+				C7FD5C721C7DB21300B48E31 /* libuv.a in Frameworks */,
 				0AFCD6121C070F2200A8D0DB /* libz.a in Frameworks */,
 				15AE1C1919AAE30900C27E9E /* libwebsockets.a in Frameworks */,
 				A07A4CAF1783777C0073F6A7 /* Foundation.framework in Frameworks */,
+				C7FD5C761C7DB21300B48E31 /* libuv.a in Frameworks */,
 				1A570364180BD1120088DEC7 /* libpng.a in Frameworks */,
 				1A570378180BD1B40088DEC7 /* libjpeg.a in Frameworks */,
 				1A5703A4180BD2350088DEC7 /* libtiff.a in Frameworks */,
+				C7FD5C741C7DB21300B48E31 /* libpomelo2.a in Frameworks */,
 				29031E0919BFE8DE00EFA1DF /* libchipmunk.a in Frameworks */,
 				1A5703BB180BD2800088DEC7 /* libwebp.a in Frameworks */,
 				1A57052E180BD3280088DEC7 /* libfreetype.a in Frameworks */,
@@ -3526,6 +3552,7 @@
 		1A57033E180BD0490088DEC7 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				C7FD44D41C7DB20D00B48E31 /* pomelo */,
 				382383E11A258FA7002C4610 /* flatbuffers */,
 				1AC026971914068200FA920D /* ConvertUTF */,
 				46C02E0418E91123004B7456 /* xxhash */,
@@ -5154,6 +5181,52 @@
 			path = ../cocos/3d;
 			sourceTree = "<group>";
 		};
+		C7FD44D41C7DB20D00B48E31 /* pomelo */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD4FF11C7DB21200B48E31 /* include */,
+				C7FD4FF41C7DB21200B48E31 /* prebuilt */,
+			);
+			name = pomelo;
+			path = ../external/pomelo;
+			sourceTree = "<group>";
+		};
+		C7FD4FF11C7DB21200B48E31 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD4FF21C7DB21200B48E31 /* pomelo.h */,
+				C7FD4FF31C7DB21200B48E31 /* pomelo_trans.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C7FD4FF41C7DB21200B48E31 /* prebuilt */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD4FF51C7DB21200B48E31 /* ios */,
+				C7FD4FF81C7DB21200B48E31 /* mac */,
+			);
+			path = prebuilt;
+			sourceTree = "<group>";
+		};
+		C7FD4FF51C7DB21200B48E31 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD4FF61C7DB21200B48E31 /* libpomelo2.a */,
+				C7FD4FF71C7DB21200B48E31 /* libuv.a */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		C7FD4FF81C7DB21200B48E31 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD4FF91C7DB21200B48E31 /* libpomelo2.a */,
+				C7FD4FFA1C7DB21200B48E31 /* libuv.a */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -5480,6 +5553,7 @@
 				1A5702F4180BCE750088DEC7 /* CCTMXObjectGroup.h in Headers */,
 				50ABBDAF1925AB4100A911A9 /* CCRenderer.h in Headers */,
 				15AE181E19AAD2F700C27E9E /* CCBundle3DData.h in Headers */,
+				C7FD5C6D1C7DB21300B48E31 /* pomelo_trans.h in Headers */,
 				1A5702F8180BCE750088DEC7 /* CCTMXTiledMap.h in Headers */,
 				5034CA21191D591100CE6051 /* ccShader_PositionTextureColorAlphaTest.frag in Headers */,
 				15AE1A2419AAD3D500C27E9E /* b2BroadPhase.h in Headers */,
@@ -5668,6 +5742,7 @@
 				3EACC9A219F5014D00EB3C5E /* CCCamera.h in Headers */,
 				50ABBECD1925AB6F00A911A9 /* s3tc.h in Headers */,
 				15AE1BD119AAE01E00C27E9E /* CCControlHuePicker.h in Headers */,
+				C7FD5C6B1C7DB21300B48E31 /* pomelo.h in Headers */,
 				50ABBE771925AB6F00A911A9 /* CCEventListenerTouch.h in Headers */,
 				5034CA33191D591100CE6051 /* ccShader_PositionTexture_uColor.frag in Headers */,
 				50ABC0171926664800A911A9 /* CCImage.h in Headers */,
@@ -5881,6 +5956,7 @@
 				15AE1BBA19AADFF000C27E9E /* HttpClient.h in Headers */,
 				292DB14619B4574100A80320 /* UIEditBoxImpl-android.h in Headers */,
 				15AE1B9419AADA9A00C27E9E /* GUIDefine.h in Headers */,
+				C7FD5C6C1C7DB21300B48E31 /* pomelo.h in Headers */,
 				15AE183B19AAD2F700C27E9E /* CCRay.h in Headers */,
 				5034CA42191D591100CE6051 /* ccShader_Position_uColor.frag in Headers */,
 				1A5701C4180BCB5A0088DEC7 /* CCLabelBMFont.h in Headers */,
@@ -5996,6 +6072,7 @@
 				0AE62CF81C1036A700BF1BF4 /* prettywriter.h in Headers */,
 				1A57028D180BCC900088DEC7 /* CCSpriteFrameCache.h in Headers */,
 				0AE62CF61C1036A700BF1BF4 /* pointer.h in Headers */,
+				C7FD5C6E1C7DB21300B48E31 /* pomelo_trans.h in Headers */,
 				1A570295180BCCAB0088DEC7 /* CCAnimation.h in Headers */,
 				50ABBDB81925AB4100A911A9 /* CCTexture2D.h in Headers */,
 				15AE1AAB19AAD40300C27E9E /* b2World.h in Headers */,
@@ -7215,7 +7292,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external $(SRCROOT)/../external/protobuf-lite/src";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external $(SRCROOT)/../external/protobuf-lite/src $(SRCROOT)/../external/pomelo/include $(SRCROOT)/../external/pomelo/deps/uv/include";
 			};
 			name = Debug;
 		};
@@ -7248,7 +7325,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external $(SRCROOT)/../external/protobuf-lite/src";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/.. $(SRCROOT)/../cocos $(SRCROOT)/../cocos/editor-support $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external $(SRCROOT)/../external/protobuf-lite/src $(SRCROOT)/../external/pomelo/include $(SRCROOT)/../external/pomelo/deps/uv/include";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -7281,6 +7358,7 @@
 					"\"$(SRCROOT)/../external/websockets/prebuilt/mac\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/mac\"",
 					"\"$(SRCROOT)/../external/curl/prebuilt/mac\"",
+					"\"$(SRCROOT)/../external/pomelo/prebuilt/mac\"",
 				);
 				MACH_O_TYPE = staticlib;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../external/png/include/mac $(SRCROOT)/../external/tiff/include/mac $(SRCROOT)/../external/webp/include/mac $(SRCROOT)/../external/jpeg/include/mac $(SRCROOT)/../external/freetype2/include/mac/freetype2 $(SRCROOT)/../external/glfw3/include/mac $(SRCROOT)/../external/websockets/include/mac $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external/curl/include/mac/curl";
@@ -7316,6 +7394,7 @@
 					"\"$(SRCROOT)/../external/websockets/prebuilt/mac\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/mac\"",
 					"\"$(SRCROOT)/../external/curl/prebuilt/mac\"",
+					"\"$(SRCROOT)/../external/pomelo/prebuilt/mac\"",
 				);
 				MACH_O_TYPE = staticlib;
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../external/png/include/mac $(SRCROOT)/../external/tiff/include/mac $(SRCROOT)/../external/webp/include/mac $(SRCROOT)/../external/jpeg/include/mac $(SRCROOT)/../external/freetype2/include/mac/freetype2 $(SRCROOT)/../external/glfw3/include/mac $(SRCROOT)/../external/websockets/include/mac $(SRCROOT)/../external/chipmunk/include/chipmunk $(SRCROOT)/../external/curl/include/mac/curl";
@@ -7346,6 +7425,7 @@
 					"\"$(SRCROOT)/../external/curl/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/websockets/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/ios\"",
+					"\"$(SRCROOT)/../external/pomelo/prebuilt/ios\"",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -7379,6 +7459,7 @@
 					"\"$(SRCROOT)/../external/curl/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/websockets/prebuilt/ios\"",
 					"\"$(SRCROOT)/../external/chipmunk/prebuilt/ios\"",
+					"\"$(SRCROOT)/../external/pomelo/prebuilt/ios\"",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
