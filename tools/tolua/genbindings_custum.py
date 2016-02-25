@@ -131,7 +131,7 @@ def main():
     try:
 
         tolua_root = '%s/tools/tolua' % project_root
-        output_dir = '%s/../syMahjong/frameworks/runtime-src/Classes/auto' % project_root
+        output_dir = '%s/quick/lib/quick-src/extra/luabinding' % project_root
 
         cmd_args = {'pomelo.ini' : ('pomelo', 'lua_pomelo_auto')}
 

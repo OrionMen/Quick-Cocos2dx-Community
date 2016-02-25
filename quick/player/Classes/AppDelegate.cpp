@@ -14,6 +14,8 @@
 #include "lua_extensions/lua_extensions_more.h"
 #include "PlayerProtocol.h"
 
+#include "lua_pomelo_auto.hpp"
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -79,6 +81,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // If you want to use Quick-Cocos2dx-Community, please uncomment below code
     quick_module_register(L);
+    //注册自己的pomelo
+    register_all_pomelo(L);
 
     LuaStack* stack = engine->getLuaStack();
     stack->setXXTEAKeyAndSign("2dxLua", "XXTEA");

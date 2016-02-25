@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "63BACE0DC6FBE8346BC156834D2027AB40C82E69",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "63BACE0DC6FBE8346BC156834D2027AB40C82E69" : 0,
+    "6668C60DCE2ADFFC1410B3511A299C29ECB1166E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "028DABF2-1A6B-41F0-A981-202131142AB1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "63BACE0DC6FBE8346BC156834D2027AB40C82E69" : "Quick-Cocos2dx-Community\/",
+    "6668C60DCE2ADFFC1410B3511A299C29ECB1166E" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "player3",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "quick\/player\/proj.mac\/player3.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/OrionMen\/Quick-Cocos2dx-Community.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63BACE0DC6FBE8346BC156834D2027AB40C82E69"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/happyelements\/Desktop\/gitTest",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6668C60DCE2ADFFC1410B3511A299C29ECB1166E"
+    }
+  ]
+}

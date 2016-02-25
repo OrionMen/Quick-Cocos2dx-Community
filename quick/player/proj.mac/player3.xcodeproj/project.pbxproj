@@ -91,6 +91,8 @@
 		9FD01B2D19F8C6BA005E0C49 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FD01B2C19F8C6BA005E0C49 /* AppController.mm */; };
 		C033B51D191B337200D06937 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C033B51A191B337200D06937 /* VisibleRect.cpp */; };
 		C07828F818B4D72E00BD2287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07828F418B4D72E00BD2287 /* main.m */; };
+		C7FD5CAA1C7F485D00B48E31 /* CCPomelo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5CA81C7F485D00B48E31 /* CCPomelo.cpp */; };
+		C7FD5CAD1C7F48C800B48E31 /* lua_pomelo_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7FD5CAB1C7F48C800B48E31 /* lua_pomelo_auto.cpp */; };
 		F405C6C919ED14AA005AD31C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F405C6CB19ED14AA005AD31C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -364,6 +366,10 @@
 		C033B51B191B337200D06937 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = ../Classes/VisibleRect.h; sourceTree = "<group>"; };
 		C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_lua_bindings.xcodeproj; path = "../../../cocos/scripting/lua-bindings/proj.ios_mac/cocos2d_lua_bindings.xcodeproj"; sourceTree = "<group>"; };
 		C07828F418B4D72E00BD2287 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7FD5CA81C7F485D00B48E31 /* CCPomelo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPomelo.cpp; sourceTree = "<group>"; };
+		C7FD5CA91C7F485D00B48E31 /* CCPomelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPomelo.h; sourceTree = "<group>"; };
+		C7FD5CAB1C7F48C800B48E31 /* lua_pomelo_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_pomelo_auto.cpp; sourceTree = "<group>"; };
+		C7FD5CAC1C7F48C800B48E31 /* lua_pomelo_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_pomelo_auto.hpp; sourceTree = "<group>"; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		F293B3CC15EB7BE500256477 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F293B3CE15EB7BE500256477 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -491,6 +497,7 @@
 		9F7287FF1A24957700EE0234 /* extra */ = {
 			isa = PBXGroup;
 			children = (
+				C7FD5CA71C7F485D00B48E31 /* pomelo */,
 				4940477B1A31C0A6004CECA6 /* nanovg */,
 				9F7288301A24957700EE0234 /* apptools */,
 				9F7288331A24957700EE0234 /* cocos2dx_extra.h */,
@@ -661,6 +668,8 @@
 		9F7288A11A24957700EE0234 /* luabinding */ = {
 			isa = PBXGroup;
 			children = (
+				C7FD5CAB1C7F48C800B48E31 /* lua_pomelo_auto.cpp */,
+				C7FD5CAC1C7F48C800B48E31 /* lua_pomelo_auto.hpp */,
 				49C655D11A36C71400603AF5 /* lua_cocos2dx_extension_nanovg_manual.cpp */,
 				49C655D21A36C71400603AF5 /* lua_cocos2dx_extension_nanovg_manual.hpp */,
 				49C655CE1A3692EF00603AF5 /* lua_cocos2dx_extension_nanovg_auto.cpp */,
@@ -845,6 +854,15 @@
 				9F7287FD1A24914D00EE0234 /* libluacocos2d iOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C7FD5CA71C7F485D00B48E31 /* pomelo */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD5CA81C7F485D00B48E31 /* CCPomelo.cpp */,
+				C7FD5CA91C7F485D00B48E31 /* CCPomelo.h */,
+			);
+			path = pomelo;
 			sourceTree = "<group>";
 		};
 		F293B3BD15EB7BE500256477 = {
@@ -1047,6 +1065,7 @@
 				9FD01B2D19F8C6BA005E0C49 /* AppController.mm in Sources */,
 				9F7289351A24957700EE0234 /* CCExposureFilter.cpp in Sources */,
 				9F7289341A24957700EE0234 /* CCDropShadowFilter.cpp in Sources */,
+				C7FD5CAA1C7F485D00B48E31 /* CCPomelo.cpp in Sources */,
 				9F7289301A24957700EE0234 /* CCBlurFilter.cpp in Sources */,
 				9F72893B1A24957700EE0234 /* CCMaskFilter.cpp in Sources */,
 				9F7289921A24957700EE0234 /* lua_extensions_more.c in Sources */,
@@ -1062,6 +1081,7 @@
 				9F7289311A24957700EE0234 /* CCBrightnessFilter.cpp in Sources */,
 				9FD0193019F8C4D4005E0C49 /* PlayerMenuServiceProtocol.cpp in Sources */,
 				9F7289371A24957700EE0234 /* CCGammaFilter.cpp in Sources */,
+				C7FD5CAD1C7F48C800B48E31 /* lua_pomelo_auto.cpp in Sources */,
 				9FD0193119F8C4D4005E0C49 /* PlayerProtocol.cpp in Sources */,
 				0A5237C01BCD45E000B39D5F /* UncaughtExceptionHandler.mm in Sources */,
 				9F72897D1A24957700EE0234 /* OpenUDIDMac.m in Sources */,
@@ -1152,7 +1172,7 @@
 					10000,
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../cocos/platform/mac $(SRCROOT)/../../../external/glfw3/include/mac $(SRCROOT)/../../../external/protobuf-lite/src";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../cocos/platform/mac $(SRCROOT)/../../../external/glfw3/include/mac $(SRCROOT)/../../../external/protobuf-lite/src $(SRCROOT)/../../../external/pomelo/include";
 			};
 			name = Debug;
 		};
@@ -1182,7 +1202,7 @@
 					10000,
 				);
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../cocos/platform/mac $(SRCROOT)/../../../external/glfw3/include/mac $(SRCROOT)/../../../external/protobuf-lite/src";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../cocos/platform/mac $(SRCROOT)/../../../external/glfw3/include/mac $(SRCROOT)/../../../external/protobuf-lite/src $(SRCROOT)/../../../external/pomelo/include";
 			};
 			name = Release;
 		};
@@ -1212,7 +1232,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../.. $(SRCROOT)/../../../cocos $(SRCROOT)/../../../cocos/base $(SRCROOT)/../../../cocos/physics $(SRCROOT)/../../../cocos/math/kazmath $(SRCROOT)/../../../cocos/2d $(SRCROOT)/../../../cocos/ui $(SRCROOT)/../../../cocos/network $(SRCROOT)/../../../cocos/audio/include $(SRCROOT)/../../../cocos/editor-support $(SRCROOT)/../../../extensions $(SRCROOT)/../../../external $(SRCROOT)/../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../external/lua/luajit/include $(SRCROOT)/../../../external/lua/tolua $(SRCROOT)/../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../lib/quick-src/ $(SRCROOT)/../../lib/quick-src/extra";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../.. $(SRCROOT)/../../../cocos $(SRCROOT)/../../../cocos/base $(SRCROOT)/../../../cocos/physics $(SRCROOT)/../../../cocos/math/kazmath $(SRCROOT)/../../../cocos/2d $(SRCROOT)/../../../cocos/ui $(SRCROOT)/../../../cocos/network $(SRCROOT)/../../../cocos/audio/include $(SRCROOT)/../../../cocos/editor-support $(SRCROOT)/../../../extensions $(SRCROOT)/../../../external $(SRCROOT)/../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../external/lua/luajit/include $(SRCROOT)/../../../external/lua/tolua $(SRCROOT)/../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../lib/quick-src/ $(SRCROOT)/../../lib/quick-src/extra $(SRCROOT)/../../../external/pomelo/include";
 			};
 			name = Debug;
 		};
@@ -1239,7 +1259,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../.. $(SRCROOT)/../../../cocos $(SRCROOT)/../../../cocos/base $(SRCROOT)/../../../cocos/physics $(SRCROOT)/../../../cocos/math/kazmath $(SRCROOT)/../../../cocos/2d $(SRCROOT)/../../../cocos/ui $(SRCROOT)/../../../cocos/network $(SRCROOT)/../../../cocos/audio/include $(SRCROOT)/../../../cocos/editor-support $(SRCROOT)/../../../extensions $(SRCROOT)/../../../external $(SRCROOT)/../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../external/lua/luajit/include $(SRCROOT)/../../../external/lua/tolua $(SRCROOT)/../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../lib/quick-src/ $(SRCROOT)/../../lib/quick-src/extra";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../.. $(SRCROOT)/../../../cocos $(SRCROOT)/../../../cocos/base $(SRCROOT)/../../../cocos/physics $(SRCROOT)/../../../cocos/math/kazmath $(SRCROOT)/../../../cocos/2d $(SRCROOT)/../../../cocos/ui $(SRCROOT)/../../../cocos/network $(SRCROOT)/../../../cocos/audio/include $(SRCROOT)/../../../cocos/editor-support $(SRCROOT)/../../../extensions $(SRCROOT)/../../../external $(SRCROOT)/../../../external/chipmunk/include/chipmunk $(SRCROOT)/../../../external/lua/luajit/include $(SRCROOT)/../../../external/lua/tolua $(SRCROOT)/../../../cocos/scripting/lua-bindings/manual $(SRCROOT)/../../../cocos/scripting/lua-bindings/auto $(SRCROOT)/../../lib/quick-src/ $(SRCROOT)/../../lib/quick-src/extra $(SRCROOT)/../../../external/pomelo/include";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
