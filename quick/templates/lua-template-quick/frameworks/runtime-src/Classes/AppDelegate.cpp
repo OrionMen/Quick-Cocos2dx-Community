@@ -21,6 +21,8 @@
 #include "anysdk_manual_bindings.h"
 #endif
 
+#include "lua_pomelo_auto.hpp"
+
 using namespace CocosDenshion;
 
 USING_NS_CC;
@@ -87,6 +89,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // use Quick-Cocos2d-X
     quick_module_register(L);
+    
+    //注册自己的pomelo
+    register_all_pomelo(L);
 
     LuaStack* stack = engine->getLuaStack();
 #if ANYSDK_DEFINE > 0

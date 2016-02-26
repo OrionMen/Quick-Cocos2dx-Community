@@ -155,7 +155,7 @@ function uiloader:seekNodeByName(parent, name)
 		return
 	end
 
-	if name == parent.name then
+	if name == parent:getName() then
 		return parent
 	end
 
@@ -173,7 +173,7 @@ function uiloader:seekNodeByName(parent, name)
 		end
 
 		if parent then
-			if name == parent.name then
+			if name == parent:getName() then
 				return parent
 			end
 		end
@@ -218,7 +218,7 @@ function uiloader:seekNodeByNameFast(parent, name)
 		return
 	end
 
-	if name == parent.name then
+	if name == parent:getName() then
 		return parent
 	end
 
