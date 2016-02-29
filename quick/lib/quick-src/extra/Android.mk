@@ -1,5 +1,12 @@
 
 LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := pomelo
+LOCAL_SRC_FILES := $(COCOS2DX_ROOT)/external/pomelo/prebuilt/android/libjpomelo.so
+include $(PREBUILT_SHARED_LIBRARY)  
+
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := extra_static
@@ -50,15 +57,26 @@ LOCAL_SRC_FILES += \
     $(LOCAL_PATH)/nanovg/nanonode/NVGNode.cpp \
     $(LOCAL_PATH)/nanovg/nanonode/NVGDrawNode.cpp
 
+#pomelo
+LOCAL_SRC_FILES += \
+	$(LOCAL_PATH)/luabinding/lua_pomelo_auto.cpp \
+	$(LOCAL_PATH)/pomelo/CCPomelo.cpp \
+
+LOCAL_STATIC_LIBRARIES := pomelo
+
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
-                           $(LOCAL_PATH)/luabinding
+                           $(LOCAL_PATH)/luabinding \
+                           
 
 LOCAL_C_INCLUDES := $(LOCAL_EXPORT_C_INCLUDES) \
                     $(COCOS2DX_ROOT)/cocos \
                     $(COCOS2DX_ROOT)/external/lua/luajit/include \
                     $(COCOS2DX_ROOT)/external/lua/tolua \
                     $(COCOS2DX_ROOT)/external \
-                    $(COCOS2DX_ROOT)/cocos/scripting/lua-bindings/manual
+                    $(COCOS2DX_ROOT)/cocos/scripting/lua-bindings/manual \
+                    $(COCOS2DX_ROOT)/external/pomelo/include \
+                    $(LOCAL_PATH)/pomelo \
+                    
 
 #filters
 LOCAL_C_INCLUDES += $(COCOS2DX_ROOT)/extensions
