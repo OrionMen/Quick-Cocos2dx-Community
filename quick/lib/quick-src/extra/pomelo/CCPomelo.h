@@ -28,10 +28,16 @@ public:
     int notifyWithTimeout(const char* route, const char* msg);
     int requestWithTimeout(const char* route, const char* msg ,LUA_FUNCTION lua_cb);
     
-    void registerLuaEventHandler(LUA_FUNCTION handler);
+    void registerLuaEventHandler(LUA_FUNCTION handler);//这个是lua监听
+    void registerLuaRequestErrorHandler(LUA_FUNCTION handler);//这个是lua request报错返回的回调
     
     LUA_FUNCTION getLuaEventHandler(){
         return _luaHandlerId;
+    }
+    
+    LUA_FUNCTION getLuaRequestErrorHandler()
+    {
+        return _luaRequestErrorHandlerId;
     }
     
     void pauseTarget();
@@ -43,11 +49,12 @@ private:
     int _handlerId;
     
     LUA_FUNCTION _luaHandlerId;
+    LUA_FUNCTION _luaRequestErrorHandlerId;
     
 private:
     void polling(float dt);
-    void unregisterLuaEventHandler();
-
+    void unRegisterLuaEventHandler();
+    void unRegisterLuaRequestErrorHandler();
 public:
     Pomelo();
     virtual ~Pomelo();

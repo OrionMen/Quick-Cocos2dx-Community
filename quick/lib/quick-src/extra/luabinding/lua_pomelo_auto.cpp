@@ -64,6 +64,53 @@ int lua_pomelo_Pomelo_notifyWithTimeout(lua_State* tolua_S)
 
     return 0;
 }
+int lua_pomelo_Pomelo_getLuaRequestErrorHandler(lua_State* tolua_S)
+{
+    int argc = 0;
+    Pomelo* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"Pomelo",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (Pomelo*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_pomelo_Pomelo_getLuaRequestErrorHandler'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 0) 
+    {
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_pomelo_Pomelo_getLuaRequestErrorHandler'", nullptr);
+            return 0;
+        }
+        cocos2d::LUA_FUNCTION ret = cobj->getLuaRequestErrorHandler();
+        tolua_pushnumber(tolua_S,(lua_Number)ret);
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "Pomelo:getLuaRequestErrorHandler",argc, 0);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_pomelo_Pomelo_getLuaRequestErrorHandler'.",&tolua_err);
+#endif
+
+    return 0;
+}
 int lua_pomelo_Pomelo_disconnect(lua_State* tolua_S)
 {
     int argc = 0;
@@ -153,6 +200,55 @@ int lua_pomelo_Pomelo_resumeTarget(lua_State* tolua_S)
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:
     tolua_error(tolua_S,"#ferror in function 'lua_pomelo_Pomelo_resumeTarget'.",&tolua_err);
+#endif
+
+    return 0;
+}
+int lua_pomelo_Pomelo_registerLuaRequestErrorHandler(lua_State* tolua_S)
+{
+    int argc = 0;
+    Pomelo* cobj = nullptr;
+    bool ok  = true;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+
+
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S,1,"Pomelo",0,&tolua_err)) goto tolua_lerror;
+#endif
+
+    cobj = (Pomelo*)tolua_tousertype(tolua_S,1,0);
+
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) 
+    {
+        tolua_error(tolua_S,"invalid 'cobj' in function 'lua_pomelo_Pomelo_registerLuaRequestErrorHandler'", nullptr);
+        return 0;
+    }
+#endif
+
+    argc = lua_gettop(tolua_S)-1;
+    if (argc == 1) 
+    {
+        cocos2d::LUA_FUNCTION arg0;
+
+        arg0 = toluafix_ref_function(tolua_S, 2, 0); ok &= arg0 >= 0;
+        if(!ok)
+        {
+            tolua_error(tolua_S,"invalid arguments in function 'lua_pomelo_Pomelo_registerLuaRequestErrorHandler'", nullptr);
+            return 0;
+        }
+        cobj->registerLuaRequestErrorHandler(arg0);
+        return 0;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "Pomelo:registerLuaRequestErrorHandler",argc, 1);
+    return 0;
+
+#if COCOS2D_DEBUG >= 1
+    tolua_lerror:
+    tolua_error(tolua_S,"#ferror in function 'lua_pomelo_Pomelo_registerLuaRequestErrorHandler'.",&tolua_err);
 #endif
 
     return 0;
@@ -546,8 +642,10 @@ int lua_register_pomelo_Pomelo(lua_State* tolua_S)
     tolua_beginmodule(tolua_S,"Pomelo");
         tolua_function(tolua_S,"new",lua_pomelo_Pomelo_constructor);
         tolua_function(tolua_S,"notifyWithTimeout",lua_pomelo_Pomelo_notifyWithTimeout);
+        tolua_function(tolua_S,"getLuaRequestErrorHandler",lua_pomelo_Pomelo_getLuaRequestErrorHandler);
         tolua_function(tolua_S,"disconnect",lua_pomelo_Pomelo_disconnect);
         tolua_function(tolua_S,"resumeTarget",lua_pomelo_Pomelo_resumeTarget);
+        tolua_function(tolua_S,"registerLuaRequestErrorHandler",lua_pomelo_Pomelo_registerLuaRequestErrorHandler);
         tolua_function(tolua_S,"getLuaEventHandler",lua_pomelo_Pomelo_getLuaEventHandler);
         tolua_function(tolua_S,"connect",lua_pomelo_Pomelo_connect);
         tolua_function(tolua_S,"requestWithTimeout",lua_pomelo_Pomelo_requestWithTimeout);

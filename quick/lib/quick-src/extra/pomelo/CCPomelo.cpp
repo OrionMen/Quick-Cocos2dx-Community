@@ -84,6 +84,11 @@ void pomelo_on_request_cb(const pc_request_t* req, int rc, const char* resp)
         else
         {
             //不等于200说明有错误，这时候应该有个lua函数负责处理这个抛出的错误code
+            pStack->pushInt(code);
+            pStack->executeFunctionByHandler(s_Pomelo->getLuaRequestErrorHandler(), 1);
+            pStack->clean();
+            
+            return ;
         }
     }
 }
@@ -100,7 +105,8 @@ void Pomelo::polling(float)
 
 Pomelo::Pomelo():
 _handlerId(0),
-_luaHandlerId(0){
+_luaHandlerId(0),
+_luaRequestErrorHandlerId(0){
     Director::getInstance()->getScheduler()->schedule(CC_SCHEDULE_SELECTOR(Pomelo::polling), this, 0, false);
 //    Director::getInstance()->getScheduler()->pauseTarget(this);
     
@@ -175,11 +181,16 @@ int Pomelo::requestWithTimeout(const char* route, const char* msg ,LUA_FUNCTION 
 
 void Pomelo::registerLuaEventHandler(LUA_FUNCTION handler)
 {
-    unregisterLuaEventHandler();
+    unRegisterLuaEventHandler();
     _luaHandlerId = handler;
 }
 
-void Pomelo::unregisterLuaEventHandler(void)
+void Pomelo::registerLuaRequestErrorHandler(LUA_FUNCTION handler)
+{
+    _luaRequestErrorHandlerId = handler;
+}
+
+void Pomelo::unRegisterLuaEventHandler(void)
 {
     if (0 != _luaHandlerId)
     {
@@ -187,3 +198,13 @@ void Pomelo::unregisterLuaEventHandler(void)
         _luaHandlerId = 0;
     }
 }
+
+void Pomelo::unRegisterLuaRequestErrorHandler(void)
+{
+    if (0 != _luaRequestErrorHandlerId)
+    {
+        LuaEngine::getInstance()->removeScriptHandler(_luaRequestErrorHandlerId); //移除lua函数的绑定
+        _luaRequestErrorHandlerId = 0;
+    }
+}
+
