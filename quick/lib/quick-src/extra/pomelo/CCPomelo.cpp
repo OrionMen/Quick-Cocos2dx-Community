@@ -44,7 +44,7 @@ void pomelo_on_event_cb(pc_client_t* client, int ev_type, void* ex_data, const c
     return ;
 }
 
-#define REQ_TIMEOUT 10
+#define REQ_TIMEOUT 30
 void pomelo_on_request_cb(const pc_request_t* req, int rc, const char* resp)
 {
     printf("test get resp %s\n", resp);
